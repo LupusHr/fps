@@ -7,7 +7,7 @@ from .models import PoliticalParty, Amount, Income
 from datetime import datetime
 
 from django.shortcuts import get_object_or_404
-import settings
+from . import settings
 
 class IndexView(TemplateView):
     template_name = "index.html"
@@ -16,7 +16,7 @@ class IndexView(TemplateView):
         context = super(IndexView, self).get_context_data()
         context["projekt"] = settings.PROJECT_NAME 
         context["desc"] = settings.PROJECT_DESCRIPTION
-        context["ctx"] = u"Početna"
+        context["ctx"] = "Početna"
 
         year = 2013 # datetime.now().year
         parties = PoliticalParty.objects.filter(amounts__year=year)\

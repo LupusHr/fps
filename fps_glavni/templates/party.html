@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load staticfiles %}
+{% load static %}
 
 {% block title %}{{ party.short_name }}{% endblock %}
 
@@ -28,14 +28,14 @@
                     <tbody>
                     {% for a in pie.1 %}
                     <tr><td>{{ a.income.name }}</td><td align="right">{{ a.amount|intcomma }} kn</td></tr>
-                    {% endfor %}    
+                    {% endfor %}
                     </tbody>
                 </table>
-                    
+
                 </div>
             </div>
         {% endfor %}
-        
+
     </p>
 {% endblock %}
 

@@ -1,4 +1,4 @@
-{% load staticfiles %}{% load tags %}
+{% load static %}{% load tags %}
 <!DOCTYPE html>
 <html lang="hr">
 <head>
@@ -10,8 +10,8 @@
     <meta name="description" content="{{ desc }}">
 
     <title>{% block title %}{{ projekt }} - {{ ctx }}{% endblock %}</title>
-	
-	
+
+
 		<link rel="stylesheet" type="text/css" href="{% static 'css/pure-min.css' %}">
 		<!--[if lte IE 8]>
 	        <link rel="stylesheet" href="{% static 'css/1.17.30_ie8.css' %}">
@@ -61,18 +61,15 @@
 			        		<li>
 			        			<a href="{% url 'url_glavni:fps_impressum' %}">Impressum</a>
 			        		</li>
-			        		<li>
-			        			<a href="{% url 'url_glavni:database_dump' %}">API</a>
-			        		</li>
 			        	</ul>
-			        	
+
 			        </div>
 			    </div>
 			</div>
 			<div id="scritps">
 				<script src="{% static 'deps/ui.js' %}"></script>
 				{% block bottom-script%}
-				
+
 				{% endblock %}
 			</div>
 		{% endblock %}
@@ -91,9 +88,9 @@
 
 		<!-- Start of StatCounter Code for Default Guide -->
 		<script type="text/javascript">
-		var sc_project=10304560; 
-		var sc_invisible=1; 
-		var sc_security="6b71b4a6"; 
+		var sc_project=10304560;
+		var sc_invisible=1;
+		var sc_security="6b71b4a6";
 		var scJsHost = (("https:" == document.location.protocol) ?
 		"https://secure." : "http://www.");
 		document.write("<sc"+"ript type='text/javascript' src='" +
@@ -107,8 +104,8 @@
 		alt="shopify analytics tool"></a></div></noscript>
 		<!-- End of StatCounter Code for Default Guide -->
 		{% endblock %}
-		
-		
+
+
 	</body>
 
 </html>

@@ -1,12 +1,11 @@
-from django.conf.urls import patterns, include, url
+from django.urls import include, path
 from django.contrib import admin
 
-urlpatterns = patterns('',
+urlpatterns = [
     # Examples:
     # url(r'^$', 'fps.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'', include('fps_glavni.urls', namespace='url_glavni',
-                                 app_name='url_glavni')),
-)
+    path(r'admin/', admin.site.urls),
+    path(r'', include('fps_glavni.urls', namespace='url_glavni')),
+]

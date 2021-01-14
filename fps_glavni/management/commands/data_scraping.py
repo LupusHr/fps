@@ -8,8 +8,8 @@ from fps_glavni.models import PoliticalParty, Income, Amount
 
 class Command(BaseCommand):
 
-    help = u'Scraps data from pdf files and prepares them for database.' \
-           u'Files db with data.'
+    help = 'Scraps data from pdf files and prepares them for database.' \
+           'Files db with data.'
 
     def handle(self, *args, **options):
         # predefined values
@@ -42,7 +42,7 @@ class Command(BaseCommand):
                     if x == '':
                         pass
                     else:
-                        extracted.append(unicode(x, 'utf-8'))
+                        extracted.append(str(x, 'utf-8'))
 
             prihodi = []
             prvi_stupac = []

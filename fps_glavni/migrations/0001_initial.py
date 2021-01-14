@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+
 
 from django.db import models, migrations
+import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
@@ -52,13 +53,13 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='amount',
             name='income',
-            field=models.ForeignKey(verbose_name='Prihod', to='fps_glavni.Income'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, verbose_name='Prihod', to='fps_glavni.Income'),
             preserve_default=True,
         ),
         migrations.AddField(
             model_name='amount',
             name='party',
-            field=models.ForeignKey(verbose_name='Politi\u010dka stranka', to='fps_glavni.PoliticalParty'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, verbose_name='Politi\u010dka stranka', to='fps_glavni.PoliticalParty'),
             preserve_default=True,
         ),
     ]
